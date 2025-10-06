@@ -51,3 +51,19 @@ archive_log() {
     echo "Successfully archived to $DEST_DIR/$ARCHIVE_NAME"
 }
 >>>>>>> Archive function
+# Handle user choice
+case $CHOICE in
+    1)
+        archive_log "$ACTIVE_DIR/heart_rate.log" "$HEART_ARCHIVE" "heart_rate"
+        ;;
+    2)
+        archive_log "$ACTIVE_DIR/temperature.log" "$TEMP_ARCHIVE" "temperature"
+        ;;
+    3)
+        archive_log "$ACTIVE_DIR/water_usage.log" "$WATER_ARCHIVE" "water_usage"
+        ;;
+    *)
+        echo " Invalid input! Please enter 1, 2, or 3."
+        exit 1
+        ;;
+esac
