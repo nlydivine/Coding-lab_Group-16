@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/bin/bash
 
 # Hospital Log Archival Script
@@ -20,3 +21,33 @@ echo "3) Water Usage"
 read -p "Enter choice (1-3): " CHOICE
 
       
+=======
+# Archive function
+archive_log() {
+    local SRC_FILE=$1
+    local DEST_DIR=$2
+    local BASE_NAME=$3
+
+    # Check if source log exists
+    if [ ! -f "$SRC_FILE" ]; then
+        echo "Error: $SRC_FILE not found!"
+        exit 1
+    fi
+
+    # Ensure destination directory exists
+    if [ ! -d "$DEST_DIR" ]; then
+        echo "Creating archive directory at $DEST_DIR..."
+        mkdir -p "$DEST_DIR" || { echo "Failed to create directory!"; exit 1; }
+    fi
+
+    # Move and rename with timestamp
+    local ARCHIVE_NAME="${BASE_NAME}_${TIMESTAMP}.log"
+    echo "Archiving $(basename "$SRC_FILE")..."
+    mv "$SRC_FILE" "$DEST_DIR/$ARCHIVE_NAME" || { echo "Failed to move file!"; exit 1; }
+
+    # Create a new empty log for continued monitoring
+    touch "$SRC_FILE"
+
+    echo "Successfully archived to $DEST_DIR/$ARCHIVE_NAME"
+}
+>>>>>>> Archive function
