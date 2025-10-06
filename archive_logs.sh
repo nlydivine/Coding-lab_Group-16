@@ -1,7 +1,7 @@
 #!/bin/bash
-"# ================================
+
 # Hospital Log Archival Script
-# ================================
+
 
 # Define directories
 ACTIVE_DIR="hospital_data/active_logs"
