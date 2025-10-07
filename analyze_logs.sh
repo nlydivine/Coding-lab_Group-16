@@ -16,7 +16,6 @@ echo "Select log file to analyze:"
 echo "1) Heart Rate (heart_rate.log)"
 echo "2) Temperature (temperature.log)"
 echo "3) Water Usage (water_usage.log)"
-<<<<<<< HEAD
 read -p "Enter choice (1-3): " CHOICE
 
 # Function to analyze logs
