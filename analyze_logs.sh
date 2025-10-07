@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash                                                                                                       
 # ===========================================
 # Hospital Log Analysis Script
 # ===========================================
@@ -16,7 +16,14 @@ echo "Select log file to analyze:"
 echo "1) Heart Rate (heart_rate.log)"
 echo "2) Temperature (temperature.log)"
 echo "3) Water Usage (water_usage.log)"
+<<<<<<< HEAD
 read -p "Enter choice (1-3): " CHOICEanalyze_log() {
+=======
+read -p "Enter choice (1-3): " CHOICE
+
+# Function to analyze logs
+analyze_log() {
+>>>>>>> 4815764d506e2d96a3210e20f766a62aa700a026
     local LOG_FILE=$1
     local LOG_NAME=$2
 
@@ -46,6 +53,7 @@ read -p "Enter choice (1-3): " CHOICEanalyze_log() {
     echo "✅ Analysis complete! Report saved to $REPORT_FILE"
 }
 
+<<<<<<< HEAD
 # Handle menu selection
 case $CHOICE in
     1)
@@ -62,3 +70,5 @@ case $CHOICE in
         exit 1
         ;;
 esac
+=======
+>>>>>>> 4815764d506e2d96a3210e20f766a62aa700a026
