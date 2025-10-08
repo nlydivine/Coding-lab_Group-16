@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/bin/bash
 
 # Hospital Log Archival Script
@@ -20,8 +19,7 @@ echo "2) Temperature"
 echo "3) Water Usage"
 read -p "Enter choice (1-3): " CHOICE
 
-      
-=======
+     
 # Archive function
 archive_log() {
     local SRC_FILE=$1
@@ -50,8 +48,8 @@ archive_log() {
 
     echo "Successfully archived to $DEST_DIR/$ARCHIVE_NAME"
 }
->>>>>>> Archive function
-# Handle user choice
+
+#Handle user choice
 case $CHOICE in
     1)
         archive_log "$ACTIVE_DIR/heart_rate.log" "$HEART_ARCHIVE" "heart_rate"
