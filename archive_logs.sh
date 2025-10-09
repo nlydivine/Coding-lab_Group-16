@@ -32,7 +32,7 @@ archive_log() {
     # Ensure destination directory exists
     if [ ! -d "$ARCHIVE_DIR" ]; then
         echo "Creating archive directory at $DEST_DIR..."
-        mkdir -p "$DEST_DIR" || { echo "Failed to create directory!"; exit 1; }
+        mkdir -p "$ARCHIVE_DIR" || { echo "Failed to create directory!"; exit 1; }
     fi
 
     # Move and rename with timestamp
